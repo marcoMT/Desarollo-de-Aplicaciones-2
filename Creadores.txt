@@ -1,0 +1,16 @@
+CREATE TABLE public.creadores
+(
+    id_creador integer NOT NULL DEFAULT nextval('creadores_id_creador_seq'::regclass),
+    nombre character varying(30) COLLATE "default".pg_catalog,
+    apellido character varying(30) COLLATE "default".pg_catalog,
+    filiacion character varying(30) COLLATE "default".pg_catalog,
+    area_actualizacion character varying(30) COLLATE "default".pg_catalog,
+    CONSTRAINT id_creador_pk PRIMARY KEY (id_creador)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.creadores
+    OWNER to postgres;
